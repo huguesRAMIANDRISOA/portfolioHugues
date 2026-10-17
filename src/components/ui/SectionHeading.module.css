@@ -1,0 +1,33 @@
+.heading {
+  margin-bottom: var(--space-7);
+}
+
+.center {
+  text-align: center;
+}
+
+.center .title::after {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 1px;
+  margin: var(--space-4) auto 0;
+  background: var(--color-accent);
+}
+
+.left {
+  margin-bottom: var(--space-6);
+}
+
+.eyebrow {
+  margin-bottom: var(--space-2);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.title {
+  font-size: var(--fs-xl);
+}

@@ -1,0 +1,105 @@
+.root {
+  position: relative;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: 36px;
+  padding: 0 var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  background: transparent;
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+}
+
+.trigger:hover,
+.trigger[aria-expanded='true'] {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.flag {
+  flex-shrink: 0;
+  width: 20px;
+  height: 14px;
+  border-radius: var(--radius-sm);
+  /* Liseré discret : le blanc des drapeaux reste lisible sur fond clair. */
+  box-shadow: 0 0 0 1px var(--color-border);
+}
+
+.chevron {
+  transition: transform 0.2s var(--ease);
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.panel {
+  position: absolute;
+  top: calc(100% + var(--space-2));
+  right: 0;
+  z-index: 60;
+  min-width: 160px;
+  padding: var(--space-1);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-float);
+  animation: reveal 0.18s var(--ease);
+}
+
+.panel[hidden] {
+  display: none;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: var(--fs-sm);
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.option:hover,
+.option:focus-visible {
+  background: var(--color-accent-soft);
+}
+
+.option:focus-visible {
+  outline-offset: -2px;
+}
+
+.selected {
+  color: var(--color-accent-strong);
+  font-weight: 500;
+}
+
+.check {
+  margin-left: auto;
+  color: var(--color-accent);
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+}

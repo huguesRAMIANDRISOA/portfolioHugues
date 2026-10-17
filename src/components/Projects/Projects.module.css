@@ -1,0 +1,94 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+}
+
+.card {
+  display: block;
+  width: 100%;
+  padding: 0;
+  text-align: left;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.media {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 5 / 3;
+  overflow: hidden;
+  background: var(--color-bg-alt);
+}
+
+/* `contain` + padding : le visuel est entier et centré, quel que soit son format
+   (logo large ou capture d'écran). Le fond du cadre fait le reste. */
+.image {
+  width: 100%;
+  height: 100%;
+  padding: var(--space-5);
+  object-fit: fill;
+  transition: transform 0.6s var(--ease);
+}
+
+.card:hover .image {
+  transform: scale(1.04);
+}
+
+.placeholderTitle {
+  font-size: 1.6rem;
+  line-height: 1.15;
+  max-width: 10ch;
+}
+
+.meta {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding-top: var(--space-4);
+}
+
+.dash {
+  flex-shrink: 0;
+  width: 14px;
+  height: 1px;
+  margin-top: 0.7rem;
+  background: var(--color-accent);
+}
+
+.info {
+  flex: 1;
+}
+
+.title {
+  font-family: var(--font-sans);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+}
+
+.category {
+  font-size: var(--fs-xs);
+}
+
+.arrow {
+  margin-top: 0.2rem;
+  color: var(--color-accent);
+  transition: transform 0.3s var(--ease);
+}
+
+.card:hover .arrow {
+  transform: translateX(4px);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,136 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1.3fr auto;
+  align-items: center;
+  gap: var(--space-7);
+}
+
+.media {
+  position: relative;
+  padding: var(--space-4) var(--space-4) var(--space-4) 0;
+}
+
+.frame {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 38%;
+  height: 34%;
+  border-top: 1px solid var(--color-accent);
+  border-right: 1px solid var(--color-accent);
+}
+
+.media::after {
+  content: '';
+  position: absolute;
+  left: var(--space-6);
+  right: var(--space-7);
+  bottom: 0;
+  height: var(--space-4);
+  background: var(--color-accent-soft);
+  z-index: 0;
+}
+
+.image {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  height: auto;
+  object-fit: cover;
+}
+
+.eyebrow {
+  margin-bottom: var(--space-3);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.title {
+  margin-bottom: var(--space-4);
+  font-size: var(--fs-lg);
+  white-space: pre-line;
+}
+
+.paragraph {
+  font-size: var(--fs-sm);
+}
+
+.paragraph + .paragraph {
+  margin-top: var(--space-2);
+}
+
+.signature {
+  margin-top: var(--space-4);
+  font-family: var(--font-script);
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--color-accent);
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding-left: var(--space-6);
+  border-left: 1px solid var(--color-border);
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.statIcon {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--color-accent-soft);
+  border-radius: 50%;
+  color: var(--color-accent);
+}
+
+.statValue {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: var(--fs-md);
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--color-text);
+}
+
+.statLabel {
+  font-size: var(--fs-xs);
+}
+
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stats {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: var(--space-5) 0 0;
+    border-left: none;
+    border-top: 1px solid var(--color-border);
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .stats {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

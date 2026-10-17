@@ -1,0 +1,22 @@
+.list {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.column {
+  flex-direction: column;
+}
+
+.link {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  color: var(--color-text);
+  transition: color 0.2s, transform 0.2s var(--ease);
+}
+
+.link:hover {
+  color: var(--color-accent);
+  transform: translateY(-2px);
+}

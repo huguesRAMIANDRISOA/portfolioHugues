@@ -1,0 +1,66 @@
+:root {
+  --color-bg: #fbf8f4;
+  --color-bg-alt: #f4eee6;
+  --color-surface: #ffffff;
+  --color-accent: #c29a5b;
+  --color-accent-strong: #a9803f;
+  --color-accent-soft: #eadbc4;
+  --color-text: #2b2622;
+  --color-text-muted: #7a716a;
+  --color-border: #ece3d8;
+  --color-on-accent: #ffffff;
+  --color-danger: #a33a2c;
+  /* Teinte moyenne des grains du fond « sable » du hero (lue par useSandTrail). */
+  --color-sand-grain: #be9d6e;
+
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-script: 'Great Vibes', cursive;
+
+  --fs-xs: 0.6875rem;
+  --fs-sm: 0.8125rem;
+  --fs-base: 0.9375rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.5rem;
+  --fs-xl: clamp(1.75rem, 3vw, 2.25rem);
+  --fs-hero: clamp(2.75rem, 6.5vw, 4.75rem);
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 6rem;
+
+  --radius-sm: 2px;
+  --radius-md: 6px;
+  --radius-full: 999px;
+
+  --shadow-card: 0 10px 30px -18px rgb(76 56 30 / 0.25);
+  --shadow-float: 0 18px 40px -20px rgb(76 56 30 / 0.35);
+
+  --container: 1140px;
+  --nav-height: 76px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-theme='dark'] {
+  --color-bg: #15120f;
+  --color-bg-alt: #1c1814;
+  --color-surface: #221d18;
+  --color-accent: #d1ab6c;
+  --color-accent-strong: #e0bd82;
+  --color-accent-soft: #3a3024;
+  --color-text: #f3ece3;
+  --color-text-muted: #a99f94;
+  --color-border: #332b23;
+  --color-on-accent: #15120f;
+  --color-danger: #e8907f;
+  /* Plus claire que le fond, réglée pour le même contraste perçu qu'en clair (ΔL* ≈ 9). */
+  --color-sand-grain: #5e4f3b;
+  --shadow-card: 0 10px 30px -18px rgb(0 0 0 / 0.6);
+  --shadow-float: 0 18px 40px -20px rgb(0 0 0 / 0.7);
+}

@@ -1,0 +1,23 @@
+.placeholder {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-serif);
+  text-align: center;
+}
+
+.warm {
+  background: linear-gradient(135deg, var(--color-accent-soft), var(--color-bg-alt));
+  color: var(--color-accent-strong);
+}
+
+.light {
+  background: linear-gradient(160deg, #f1ebe3, #ddd2c4);
+  color: #8a7356;
+}
+
+.dark {
+  background: linear-gradient(160deg, #2a241e, #120f0c);
+  color: #e3c48f;
+}
